@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MENU</title>
+        <!--style2-->
+        <link rel="stylesheet" href="style2.css">
+    </head>
+    <body>
+        <div class="container">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            <div class="cards">
+                <div class="card">
+                    <div class="product">
+                        <img class="card-image" src="gmbr/dimsum.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="detail">
+                            <div>
+                                <h3 class="title">Dimsum</h3>
+                            </div>
+                            <p class="desc">
+                                Dimsum berasal dari tradisi kuliner Tiongkok yang kuno diperkirakan bermula dari Dinasti Tang (abad ke-7 hingga ke-10 Masehi) di provinsi Guangdong Tiongkok selatan. Awalnya dimsum disajikan sebagai camilan ringan untuk menemani teh di rumah teh atau restoran.
+                            </p>
+                            <div>
+                                <a href="#" class="button-link">Learn More &#8594;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product">
+                        <img class="card-image" src="gmbr/SpringRolls.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="detail">
+                            <div>
+                                <h3 class="title">Spring Rolls</h3>
+                            </div>
+                            <p class="desc">
+                                Spring roll memiliki sejarah yang panjang dan beragam di berbagai budaya Asia. Asal usulnya dapat ditelusuri ke Tiongkok pada masa Dinasti Jin (abad ke-3 hingga ke-5 Masehi). Awalnya, kulit spring roll terbuat dari tepung terigu dan air.
+                            </p>
+                            <div>
+                                <a href="#" class="button-link">Learn More &#8594;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product">
+                        <img class="card-image" src="gmbr/Falafel.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="detail">
+                            <div>
+                                <h3 class="title">Falafel</h3>
+                            </div>
+                            <p class="desc">
+                                Falafel adalah makanan tradisional Timur Tengah yang terdiri dari bola-bola atau patty yang terbuat dari kacang chickpea atau fava yang digiling. Selama masa Kekhalifahan Islam, falafel menyebar ke berbagai wilayah Timur Tengah, dan kini menjadi simbol kuliner nasional di negara-negara seperti Mesir, Palestina, Israel, dan Lebanon.
+                            </p>
+                            <div>
+                                <a href="#" class="button-link">Learn More &#8594;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product">
+                        <img class="card-image" src="gmbr/dimsum.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="detail">
+                            <div>
+                                <h3 class="title">Dimsum</h3>
+                            </div>
+                            <p class="desc">
+                                Dimsum berasal dari tradisi kuliner Tiongkok yang kuno diperkirakan bermula dari Dinasti Tang (abad ke-7 hingga ke-10 Masehi) di provinsi Guangdong Tiongkok selatan. Awalnya dimsum disajikan sebagai camilan ringan untuk menemani teh di rumah teh atau restoran.
+                            </p>
+                            <div>
+                                <a href="#" class="button-link">Learn More &#8594;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product">
+                        <img class="card-image" src="gmbr/SpringRolls.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="detail">
+                            <div>
+                                <h3 class="title">Spring Rolls</h3>
+                            </div>
+                            <p class="desc">
+                                Spring roll memiliki sejarah yang panjang dan beragam di berbagai budaya Asia. Asal usulnya dapat ditelusuri ke Tiongkok pada masa Dinasti Jin (abad ke-3 hingga ke-5 Masehi). Awalnya, kulit spring roll terbuat dari tepung terigu dan air.
+                            </p>
+                            <div>
+                                <a href="#" class="button-link">Learn More &#8594;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product">
+                        <img class="card-image" src="gmbr/Falafel.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="detail">
+                            <div>
+                                <h3 class="title">Falafel</h3>
+                            </div>
+                            <p class="desc">
+                                Falafel adalah makanan tradisional Timur Tengah yang terdiri dari bola-bola atau patty yang terbuat dari kacang chickpea atau fava yang digiling. Selama masa Kekhalifahan Islam, falafel menyebar ke berbagai wilayah Timur Tengah, dan kini menjadi simbol kuliner nasional di negara-negara seperti Mesir, Palestina, Israel, dan Lebanon.
+                            </p>
+                            <div>
+                                <a href="#" class="button-link">Learn More &#8594;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let index = 0;
+        
+            function showSlide(n) {
+                const slides = document.querySelector('.cards');
+                const totalSlides = document.querySelectorAll('.card').length / 3;
+                if (n >= totalSlides) {
+                    index = 0;
+                } else if (n < 0) {
+                    index = totalSlides - 1;
+                } else {
+                    index = n;
+                }
+                slides.style.transform = `translateX(${-index * 100}%)`;
+            }
+        
+            document.querySelector('.prev').addEventListener('click', () => {
+                showSlide(index - 1);
+            });
+        
+            document.querySelector('.next').addEventListener('click', () => {
+                showSlide(index + 1);
+            });
+        </script>
+        
+    </body>
+</html>
